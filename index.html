@@ -17,29 +17,41 @@
         </div>
       </nav>
     </div>
+
     <div class="container" ng-controller="Test">
+
       <div class="row">
         <div class="col s12"></div>
         <div class="col s12 m4 l2"></div>
         <div class="col s12 m4 l8">
           <div class="row card trans">
+            <!-- Tabs added -->
+              <div class="card-tabs card-content">
+              <ul class="tabs  tabs-fixed-width">
+                <li class="tab"><a class="active" href="#">Login</a></li>
+                <li class="tab"><a  href="#">Signup</a></li>
+              </ul>
+            </div>
+            <div class="card-content center welcome">
+              <h4>Welcome Back!</h4>
+            </div>
             <form class="col s12">
-              <br>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="user_name" type="text" class="validate">
+
+                  <input id="user_name" type="text" class="validate" autocomplete="off" required>
                   <label for="user_name">User Name</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
+                  <input id="password" type="password" class="validate" required>
                   <label for="password">Password</label>
                 </div>
               </div>
-              <a href="">Forgot Password?</a><br>
-              <div class="row center">  
-                <a class="waves-effect waves-light btn cyan accent-4">Login</a>
+              <a href="">Forgot Password?</a><br><br>
+              <div class="row center">
+                <a class="waves-effect waves-light btn-large cyan accent-4">Login</a>
               </div>
             </form>
           </div>
