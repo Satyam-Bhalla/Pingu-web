@@ -1,3 +1,3 @@
 'use strict';   
 
-var app = angular.module('offchat', []);
+var app = angular.module('offChat', []);

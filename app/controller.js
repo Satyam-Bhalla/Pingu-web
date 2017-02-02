@@ -1,3 +1,3 @@
-app.controller("test", function($scope){
+app.controller("Test", function($scope){
 	$scope.testname = "OffChat"
 })		
