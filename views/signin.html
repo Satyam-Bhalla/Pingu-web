@@ -1,3 +1,6 @@
+<?php
+include('../api/imports/db_connect.php');
+?>
 <div class="container" ng-controller="AuthController">
 <div class="row">
 
@@ -39,28 +42,32 @@
 <div class="card-content center welcome">
 <h5>Sign Up for Free!</h5>
 </div>
-<form class="col s12">
+<form class="col s12" method="post" action="user.php">
   <div class="row">
     <div class="input-field col s12">
-      <input id="user_name" type="text" class="validate" required>
-      <label for="user_name">User Name</label>
+      <input id="username" type="text" name="username"class="validate" required>
+      <label for="username">User Name</label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="email" type="email" class="validate" autocomplete="off">
+      <input id="email" type="email" class="validate" name="email" autocomplete="off">
       <label for="email">Email</label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="password" type="password" class="validate" required>
+      <input id="password" type="password" name = "password"class="validate" required>
       <label for="password">Password</label>
     </div>
   </div>
   <div class="pointit" ng-click="">Already have an Account?</div><br><br>
   <div class="row center">
-    <a class="waves-effect waves-light btn-large cyan accent-4">Sign Up</a>
+    <!-- <a class="waves-effect waves-light btn-large cyan accent-4">Sign Up</a> -->
+    <!-- <input type="submit" class="waves-effect waves-light btn-large cyan accent-4" value="Sign up" /> -->
+  </div>
+  <div class="row center">
+    <input type="submit" name="submit" value="Sign up">
   </div>
 </form>
 </div>
@@ -69,6 +76,3 @@
 </div>
 </div>
 </div>
-
-
-
