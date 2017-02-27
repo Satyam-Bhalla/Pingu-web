@@ -18,14 +18,14 @@
   				$password = sha1(md5(mysqli_real_escape_string($con,$_POST['password'])));
   				$email = mysqli_real_escape_string($con,$_POST['email']);
   				//We check if there is no other user using the same username
-  				$dn = mysqli_num_rows(mysqli_query($con,'select user_id from users where username="'.$username.'"'));
+  				$dn = mysqli_num_rows(mysqli_query($con,'select id from users where username="'.$username.'"'));
           if($dn==0)
 				      {
                 //We count the number of users to give an ID to this one
-		           $dn2 = mysqli_num_rows(mysqli_query($con,'select user_id from users'));
+		           $dn2 = mysqli_num_rows(mysqli_query($con,'select id from users'));
                $id = $dn2+1;
                //We save the informations to the databse
-               if(mysqli_query($con,'insert into users(user_id, username, user_email, user_password, user_login_date) values ('.$id.', "'.$username.'", "'.$email.'", "'.$password.'", "'.date('y-m-d').'")'))
+               if(mysqli_query($con,'insert into users(id, username,email,password, user_login_date) values ('.$id.', "'.$username.'", "'.$email.'", "'.$password.'", "'.date('y-m-d').'")'))
                 {
                   //We dont display the form
                   $form = false;
@@ -56,11 +56,13 @@
 	//We display a message if necessary
 	  if(isset($message))
 	   {
-	 	    echo '<div class="message">'.json_encode($message).'</div>';
-	      }
+	 	    $jsonmessage = json_encode($message);
+      echo $jsonmessage;
+        }
       }else{
         $message = "Account created successfully";
-        echo json_encode($message);
+        $jsonmessage = json_encode($message);
+        echo $jsonmessage;
       }
 
   ?>

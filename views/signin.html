@@ -18,23 +18,24 @@ include('../api/imports/db_connect.php');
     <div class="card-content center welcome">
       <h5>Welcome Back!</h5>
     </div>
-    <form class="col s12">
+    <form class="col s12" method="post" action="login.php">
       <div class="row">
         <div class="input-field col s12">
 
-          <input id="user_name" type="text" class="validate" autocomplete="off" required>
-          <label for="user_name">User Name</label>
+          <input id="username" name="username"type="text" class="validate" autocomplete="off" required>
+          <label for="username">User Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate" required>
+          <input id="password" type="password"name="password" class="validate" required>
           <label for="password">Password</label>
         </div>
       </div>
       <div class="pointit" ng-click="">Forgot Password?</div><br><br>
       <div class="row center">
-        <a class="waves-effect waves-light btn-large cyan accent-4">Login</a>
+        <!-- <a class="waves-effect waves-light btn-large cyan accent-4">Login</a> -->
+        <input type="submit" name="login" value="Login">
       </div>
     </form>
 </div>
