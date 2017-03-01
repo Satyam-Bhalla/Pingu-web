@@ -1,3 +1,0 @@
-<?php
-	#api for authentication
-?>
