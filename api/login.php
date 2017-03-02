@@ -68,7 +68,7 @@ if ($form) {
 
 	// We display a message if necessary
 	if (isset($message)) {
-		$arr_m = array("reponse"=>$message, "status"=>False);
+		$arr_m = array("response"=>$message, "status"=>False);
 		echo json_encode(arr_m);
 	}
 }
