@@ -3,7 +3,7 @@
 // api for user info
 
 include ('imports/db_connect.php');
-inlcude ('imports/util.php')
+inlcude ('imports/util.php');
 
 
 if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
