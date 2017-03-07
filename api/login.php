@@ -15,8 +15,9 @@ include ('imports/db_connect.php');
 // 	$ousername = '';
 // 	//We check if the form has been sent
 
-if (isset($_POST['username'], $_POST['password'])) {
+if ($_POST = json_decode(file_get_contents('php://input'),true)) {
 
+if (isset($_POST['username'], $_POST['password'])) {
 	// We remove slashes depending on the configuration
 
 	if (get_magic_quotes_gpc()) {
@@ -60,16 +61,24 @@ if (isset($_POST['username'], $_POST['password'])) {
 		$message = 'The username or password is incorrect.';
 	}
 }
+}
 else {
 	$form = true;
 }
+
 
 if ($form) {
 
 	// We display a message if necessary
 	if (isset($message)) {
 		$arr_m = array("response"=>$message, "status"=>False);
-		echo json_encode(arr_m);
+		echo json_encode($arr_m);
+	}
+
+	else {
+		$message = "Bad Request";
+		$arr_m = array("response"=>$message, "status"=>False);
+		echo json_encode($arr_m);
 	}
 }
 

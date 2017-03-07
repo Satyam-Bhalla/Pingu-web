@@ -8,4 +8,4 @@ else {
 	header("Location: index.html");
 	exit;
 }
- ?>
+?>

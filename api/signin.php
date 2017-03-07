@@ -6,6 +6,8 @@ include ('imports/db_connect.php');
 include ('imports/util.php');
 
 
+if ($_POST = json_decode(file_get_contents('php://input'),true)) {
+
 if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 
   // We remove slashes depending on the configuration
@@ -69,7 +71,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 else {
   $form = true;
 }
-
+}
 if ($form) {
 
   // We display a message if necessary

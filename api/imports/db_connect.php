@@ -3,7 +3,7 @@ session_start();
 $db_host = "localhost";
 $db_username = "root";
 $db_password = "";
-$db_name = "";
+$db_name = "chatapp";
 
 // We log to the DataBase
 
