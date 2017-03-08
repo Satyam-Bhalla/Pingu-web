@@ -31,7 +31,7 @@ app.controller("AuthController", function($scope, $http){
 
 		else {
 			 Materialize.toast('Something is Empty!', 3000)
-		}		
+		}
 	}
 
 
@@ -64,5 +64,5 @@ app.controller("AuthController", function($scope, $http){
 			 Materialize.toast('Something is Empty!', 3000)
 			}
 		}
-	}		
-})		
+	}
+})
