@@ -7,9 +7,12 @@ app.config(function($routeProvider, $locationProvider) {
     .when("/", {
     	title : "Login - OffChat",
         templateUrl : "views/signin.html"
-    }).
-    otherwise({
+    })
+    .when("#/chat", {
+    	title : "Home - OffChat",
+        templateUrl : "views/chat.html"
+    })
+    .otherwise({
 		redirectTo: '/'
   	});
-    $locationProvider.hashPrefix('!');
 });

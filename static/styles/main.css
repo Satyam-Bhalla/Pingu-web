@@ -27,3 +27,12 @@ body {
 .btn-large {
 	width: 90% !important;
 }
+
+@media screen and (min-width: 568px) {
+	#toast-container {
+		position: fixed;
+		top: 0px !important; 
+		min-width: 90%;
+		text-align: center
+	}
+}

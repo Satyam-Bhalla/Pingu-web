@@ -1,4 +1,4 @@
-app.controller("AuthController", function($scope, $http){
+app.controller("AuthController", function($scope, $http, $window){
 	$('ul.tabs').tabs();
 
 	$scope.login = {
@@ -23,6 +23,8 @@ app.controller("AuthController", function($scope, $http){
 					Materialize.toast(data.data.response, 2000,"" ,function() {
 						if (data.data.status) {
 							//route and set session
+							alert("routing")
+							$window.location = "#/chat"
 						}
 					})
 				}
