@@ -10,8 +10,7 @@
 	
 4. Views - Partials for single page loading
 
-<<<<<<< HEAD
-=======
+
 #### Installing:
 
 1. Install Database and update mysql credentials.
@@ -26,4 +25,4 @@ $ php -S localhost:8090
 >> Document root is /media/paras/UBUNTU 16_0/linux_t/Offline-chat-app
 	
 ```
->>>>>>> 5b2f30d582d210ca736b15043050e858763ddbf5
+

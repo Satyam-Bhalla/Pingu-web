@@ -53,12 +53,20 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
         $message = 'An error occurred while signing up.';
       }
     }
+    else if($email_check) {
+
+      // Otherwise, we say the username is not available
+
+      $form = true;
+      $message = 'This Email "'.$_POST['email'].'" is not available!';
+    }
+
     else {
 
       // Otherwise, we say the username is not available
 
       $form = true;
-      $message = 'The username or email you want to use is not available, please choose another one.';
+      $message = 'The username "'.$_POST['username'].'" is already in use!';
     }
   }
   else {
@@ -66,7 +74,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
     // Otherwise, we say the email is not valid
 
     $form = true;
-    $message = 'The email you entered is not valid.';
+    $message = 'The email you entered is not valid!';
   }
 }
 else {
