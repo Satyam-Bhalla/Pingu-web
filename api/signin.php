@@ -29,7 +29,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
     // We check if there is no other user using the same username
 
     $dn = mysqli_num_rows(mysqli_query($con, 'select id from users where username="' . $username . '"'));
-    if ($dn == 0) {
+    $email_check =  mysqli_num_rows(mysqli_query($con, 'select id from users where email="' . $email . '"'));
+    if ($dn == 0 && $email_check == 0) {
 
       // We count the number of users to give an ID to this one
 
@@ -57,7 +58,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
       // Otherwise, we say the username is not available
 
       $form = true;
-      $message = 'The username you want to use is not available, please choose another one.';
+      $message = 'The username or email you want to use is not available, please choose another one.';
     }
   }
   else {
