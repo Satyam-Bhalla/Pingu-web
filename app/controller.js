@@ -1,4 +1,4 @@
-app.controller("AuthController", function($scope, $http, $window){
+app.controller("AuthController", function($scope, $http, $window, $location){
 	$('ul.tabs').tabs();
 
 	$scope.login = {
@@ -11,6 +11,7 @@ app.controller("AuthController", function($scope, $http, $window){
 		"password":"",
 		"email":"",
 	}
+
 	$scope.go_login = function() {
 		if ($scope.login.username && $scope.login.password) {
 			$http({
@@ -20,11 +21,10 @@ app.controller("AuthController", function($scope, $http, $window){
 	  		})
 			.then(function(data, status, headers, config) {
 				if (data.data.response) {
-					Materialize.toast(data.data.response, 2000,"" ,function() {
+					Materialize.toast(data.data.response, 1000,"" ,function() {
 						if (data.data.status) {
-							//route and set session
-							alert("routing")
-							$window.location = "#/chat"
+							$location.path('/chat/')
+							$scope.$apply()
 						}
 					})
 				}
@@ -51,7 +51,8 @@ app.controller("AuthController", function($scope, $http, $window){
 					Materialize.toast(data.data.response, 2000,"" ,function() {
 						if (data.data.status) {
 							Materialize.toast("Please Wait....", 2000)
-							//route and set session
+							$location.path('/chat/')
+							$scope.$apply()
 						}
 					})
 				}
@@ -67,4 +68,10 @@ app.controller("AuthController", function($scope, $http, $window){
 			}
 		}
 	}
+})
+
+
+
+app.controller("ChatController", function($scope, $http, $window, $location){
+	$scope.id = 3131
 })

@@ -6,13 +6,17 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
     	title : "Login - OffChat",
-        templateUrl : "views/signin.html"
+        templateUrl : "views/signin.html",
+        controller: 'AuthController',
     })
-    .when("#/chat", {
+    .when("/chat/", {
     	title : "Home - OffChat",
-        templateUrl : "views/chat.html"
+        templateUrl : "views/chat.html",
+        controller: 'ChatController'
     })
     .otherwise({
 		redirectTo: '/'
   	});
+
+  	$locationProvider.hashPrefix('!');
 });
