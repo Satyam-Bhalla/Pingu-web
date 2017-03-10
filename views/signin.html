@@ -15,22 +15,23 @@
     <div class="card-content center welcome">
       <h5>Welcome Back!</h5>
     </div>
-    <form class="col s12">
+    <form class="col s12" ng-submit="go_login()">
       <div class="row">
         <div class="input-field col s12">
 
-          <input id="username" ng-model="login.username" type="text" class="validate" autocomplete="off" required>
+          <input id="username" ng-model="login.username" type="text" class="validate" autocomplete="off">
           <label for="username">User Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" ng-model="login.password" class="validate" required>
+          <input id="password" type="password" ng-model="login.password" class="validate">
           <label for="password">Password</label>
         </div>
       </div>
       <div class="pointit" ng-click="">Forgot Password?</div><br><br>
       <div class="row center">
+      <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
       <a class="waves-effect waves-light btn-large cyan accent-4" ng-click="go_login()">Login</a>
       </div>
     </form>
@@ -39,27 +40,28 @@
 <div class="card-content center welcome">
 <h5>Sign Up for Free!</h5>
 </div>
-<form class="col s12">
+<form class="col s12" ng-submit="go_signin()">
   <div class="row">
     <div class="input-field col s12">
-      <input id="username" type="text" ng-model="signin.username" class="validate" required>
+      <input id="username" type="text" ng-model="signin.username"  class="validate">
       <label for="username">User Name</label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="email" type="email" class="validate" ng-model="signin.email" autocomplete="off">
+      <input id="email" type="text" class="validate" ng-model="signin.email">
       <label for="email">Email</label>
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="password" type="password" ng-model="signin.password" class="validate" required>
+      <input id="password" type="password" ng-model="signin.password"  class="validate">
       <label for="password">Password</label>
     </div>
   </div>
   <div class="pointit" ng-click="">Already have an Account?</div><br><br>
   <div class="row center">
+    <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
     <a class="waves-effect waves-light btn-large cyan accent-4" ng-click ="go_signin()">Sign Up</a>
   </div>
 </form>
