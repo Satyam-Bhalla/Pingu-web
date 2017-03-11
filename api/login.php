@@ -33,7 +33,7 @@ if (isset($_POST['username'], $_POST['password'])) {
 
 	// We get the password of the user
 
-	$req = mysqli_query($con, 'select password,id from users where username="' . $username . '"');
+	$req = mysqli_query($con, 'select * from users where username="' . $username . '"');
 	$dn = mysqli_fetch_array($req, MYSQLI_BOTH);
 
 	// We compare the submited password and the real one, and we check if the user exists
@@ -46,10 +46,14 @@ if (isset($_POST['username'], $_POST['password'])) {
 
 		// We save the user name in the session username and the user Id in the session userid
 
-		$_SESSION['username'] = $_POST['username'];
-		$_SESSION['userid'] = $dn['id'];
+		$uid = $dn['id'];
 		$login_message = "You have successfuly been logged in";
-		$arr_m = array("response"=>$login_message, status=>True);
+		$arr_m = array("response"=>$login_message, 
+						"status"=>True, 
+						"id"=>$uid, 
+						"name"=>$dn['username'], 
+						"email"=>$dn["email"]);
+
 		$json_login_message = json_encode($arr_m);
 		echo $json_login_message;
 	}

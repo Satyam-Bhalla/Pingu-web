@@ -5,6 +5,9 @@
 include ('imports/db_connect.php');
 include ('imports/util.php');
 
+$id = 0;
+$username;
+$email;
 
 if ($_POST = json_decode(file_get_contents('php://input'),true)) {
 
@@ -93,7 +96,12 @@ if ($form) {
 }
 else {
   $message = "Account created successfully";
-  $arr_m = array("response" => $message,"status"=>True);
+  $arr_m = array("response"=>$message, 
+            "status"=>True, 
+            "id"=>$id, 
+            "name"=>$username, 
+            "email"=>$email);
+
   $jsonmessage = json_encode($arr_m);
   echo $jsonmessage;
 }

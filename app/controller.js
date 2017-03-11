@@ -1,11 +1,15 @@
-app.controller("AuthController", function($scope, $http, $window, $location){
+app.controller("AuthController", function($scope, $http, $window, $location, $rootScope){
 	$('ul.tabs').tabs();
 
 	$scope.login = {
 		"username":"",
 		"password":""
 	}
-
+	$rootScope.user  = {
+		"id":"",
+		"username":"",
+		"email":""
+	}
 	$scope.signin = {
 		"username":"",
 		"password":"",
@@ -23,8 +27,12 @@ app.controller("AuthController", function($scope, $http, $window, $location){
 				if (data.data.response) {
 					Materialize.toast(data.data.response, 1000,"" ,function() {
 						if (data.data.status) {
+							$rootScope.user.id = data.data.id
+							$rootScope.user.username = data.data.name
+							$rootScope.user.email = data.data.email
 							$location.path('/chat/')
-							$scope.$apply()
+							$rootScope.$apply()
+							
 						}
 					})
 				}
@@ -51,8 +59,11 @@ app.controller("AuthController", function($scope, $http, $window, $location){
 					Materialize.toast(data.data.response, 2000,"" ,function() {
 						if (data.data.status) {
 							Materialize.toast("Please Wait....", 2000)
+							$rootScope.user.id = data.data.id
+							$rootScope.user.username = data.data.name
+							$rootScope.user.email = data.data.email
 							$location.path('/chat/')
-							$scope.$apply()
+							$rootScope.$apply()
 						}
 					})
 				}
@@ -72,6 +83,20 @@ app.controller("AuthController", function($scope, $http, $window, $location){
 
 
 
-app.controller("ChatController", function($scope, $http, $window, $location){
-	$scope.id = 3131
+app.controller("ChatController", function($scope, $rootScope, $http, $window, $location) {
+	
 })
+
+
+var checkRoute = function ($q, $rootScope, $location) {
+    var defer = $q.defer();
+  	if (typeof $rootScope.user.id==undefined) {
+        defer.reject()
+        $location.path("/")
+        $rootScope.$apply()
+  	}
+  	else {
+    	defer.resolve(true); 
+  	}	
+  	return defer.promise;
+}

@@ -12,7 +12,10 @@ app.config(function($routeProvider, $locationProvider) {
     .when("/chat/", {
     	title : "Home - OffChat",
         templateUrl : "views/chat.html",
-        controller: 'ChatController'
+        controller: 'ChatController',
+        resolve: {
+            factory: checkRoute
+      }
     })
     .otherwise({
 		redirectTo: '/'
