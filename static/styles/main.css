@@ -1,0 +1,38 @@
+body {
+	margin:0;
+	padding: 0;
+}
+
+.trans {
+	background:none;
+	background: rgba(255, 255, 255, 0.7)
+}
+
+.pointit {
+	cursor: pointer;
+}
+/*Css for the tabs*/
+.card-tabs a {
+	color: #00b8d4 !important;
+	font-weight: bold;
+}
+.card-tabs .indicator{
+	background-color: #00b8d4;
+}
+/*tabs css ends here*/
+
+.welcome {
+	color:  #00b8d4;
+}
+.btn-large {
+	width: 90% !important;
+}
+
+@media screen and (min-width: 568px) {
+	#toast-container {
+		position: fixed;
+		top: 0px !important; 
+		min-width: 90%;
+		text-align: center
+	}
+}

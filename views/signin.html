@@ -1,0 +1,73 @@
+<div class="container">
+<div class="row">
+
+  <div class="col s12"></div>
+  <div class="col s12 m12 l2"></div>
+  <div class="col s12 m12 l8">
+    <div class="row card trans">
+      <div class="card-tabs card-content">
+       <ul class="tabs  tabs-fixed-width">
+        <li class="tab col s3"><a class="active" href="#login">Log In</a></li>
+        <li class="tab col s3"><a href="#signin">Sign Up</a></li>
+      </ul>
+      </div>
+    <div id="login">
+    <div class="card-content center welcome">
+      <h5>Welcome Back!</h5>
+    </div>
+    <form class="col s12" ng-submit="go_login()">
+      <div class="row">
+        <div class="input-field col s12">
+
+          <input id="username" ng-model="login.username" type="text" class="validate" autocomplete="off">
+          <label for="username">User Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" ng-model="login.password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="pointit" ng-click="">Forgot Password?</div><br><br>
+      <div class="row center">
+      <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+      <a class="waves-effect waves-light btn-large cyan accent-4" ng-click="go_login()">Login</a>
+      </div>
+    </form>
+</div>
+<div id="signin" >
+<div class="card-content center welcome">
+<h5>Sign Up for Free!</h5>
+</div>
+<form class="col s12" ng-submit="go_signin()">
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="username" type="text" ng-model="signin.username"  class="validate">
+      <label for="username">User Name</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="email" type="text" class="validate" ng-model="signin.email">
+      <label for="email">Email</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="password" type="password" ng-model="signin.password"  class="validate">
+      <label for="password">Password</label>
+    </div>
+  </div>
+  <div class="pointit" ng-click="">Already have an Account?</div><br><br>
+  <div class="row center">
+    <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+    <a class="waves-effect waves-light btn-large cyan accent-4" ng-click ="go_signin()">Sign Up</a>
+  </div>
+</form>
+</div>
+</div>
+<div class="col s12 m12 l2 4"></div>
+</div>
+</div>
+</div>
