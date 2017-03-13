@@ -13,9 +13,9 @@ app.config(function($routeProvider, $locationProvider) {
     	title : "Home - OffChat",
         templateUrl : "views/chat.html",
         controller: 'ChatController',
-        resolve: {
-            factory: checkRoute
-      }
+      //   resolve: {
+      //       factory: checkRoute
+      // }
     })
     .otherwise({
 		redirectTo: '/'

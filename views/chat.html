@@ -1,7 +1,17 @@
-<div>
-	<p>
-		UserId: {{user.id}}<br>
-		Name: {{user.username}}<br>
-		Email: {{user.email}}<br>
-	</p>
+<div class="side_list">
+		<div class="user_search card input-field col m6">
+          <i class="material-icons prefix cyan-text accent-4">search</i>
+          <input type="text">
+        </div>
+		 <ul class="collection">
+		    <li class="collection-item avatar pointit" ng-repeat="x in ['user1', 'user2', 'user3', 'user4','user5', 'user6', 'user7', 'user8']">
+		      <img class="circle set_line_height" src="https://dummyimage.com/300/09f/fff.png" alt="">
+		      <p class="user_name_list">{{x | uppercase}}</p>
+		      <p class="list_time">12:30pm</p><br>
+		      <p class="message_sample">Lorem ipsum dolor sit amet</p>
+		    </li>
+		</ul>
+</div>
+<div class="chatarena">
+	 
 </div>

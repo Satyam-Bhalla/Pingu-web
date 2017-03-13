@@ -1,11 +1,12 @@
 body {
 	margin:0;
 	padding: 0;
+background: #DFE2DB
 }
 
 .trans {
 	background:none;
-	background: rgba(255, 255, 255, 0.7)
+	background: #fff;
 }
 
 .pointit {
@@ -23,6 +24,7 @@ body {
 
 .welcome {
 	color:  #00b8d4;
+	card:white;
 }
 .btn-large {
 	width: 90% !important;
@@ -35,4 +37,61 @@ body {
 		min-width: 90%;
 		text-align: center
 	}
+}
+
+.side_list {
+	position:fixed;
+	height:auto;
+	width:30%;
+	height:100vh;
+	overflow-y:auto;
+	background:#fff;
+	padding:10px 0px 25px 0px;
+}
+
+.user_name_list {
+	float:left;
+	line-height: 15px;
+	padding-left:10px;
+	font-weight: 600;
+}
+.list_time {
+	font-size: 12px;
+	float:right;
+	line-height: 15px;
+}
+
+.set_line_height {
+	margin-top:10px;
+}
+
+.message_sample {
+	font-size:12px;
+	padding-left:10px;
+}
+
+
+.user_search {
+	height:45px;
+}
+
+.user_search > .prefix {
+	line-height:43px;
+	padding:0px 5px;
+	font-size: 27px;
+	font-size: 27px
+}
+
+.user_search > input {
+	border:0;
+}
+.user_search > input:focus {
+	border:0 !important;
+	border-color: #fff !important;
+	padding:0;
+	box-shadow:0px 0px 0px #fff !important;
+}
+
+.user_search {
+	margin:-2px;
 }

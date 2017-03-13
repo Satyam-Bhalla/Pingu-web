@@ -16,6 +16,7 @@ app.controller("AuthController", function($scope, $http, $window, $location, $ro
 		"email":"",
 	}
 
+
 	$scope.go_login = function() {
 		if ($scope.login.username && $scope.login.password) {
 			$http({
@@ -42,12 +43,13 @@ app.controller("AuthController", function($scope, $http, $window, $location, $ro
 		else {
 			 Materialize.toast('Something is Empty!', 3000)
 		}
+		
 	}
 
 
 	$scope.go_signin = function() {
-
 		if ($scope.signin.username && $scope.signin.password && $scope.signin.email) {
+
 			$http({
 				method: "POST",
 				url: "api/signin.php",
