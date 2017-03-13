@@ -77,7 +77,7 @@ background: #DFE2DB
 
 .user_search > .prefix {
 	line-height:43px;
-	padding:0px 5px;
+	padding:2px 5px 0px 10px;
 	font-size: 27px;
 	font-size: 27px
 }
@@ -104,16 +104,19 @@ background: #DFE2DB
 	width:74.5%;
 	height:100vh;
 	overflow-y:auto;
-	/*background:#eee;*/
+	background:#eceff1;
 	padding:10px 0px 25px 0px;
 }
 
 .text-box {
 	resize:none !important;
-	border-radius: 30px;
-	padding:8px 14px;
+	border-radius: 0px;
+	padding:14px 14px 0px 14px !important;
 	border-width: 2px;
-	border-color: #00bcd4;
+	height: 55px;
+	border:2px solid #00bcd4 !important;
+	background: #fff;
+	border-right: 0 !important;
 }
 
 .text-box:focus {
@@ -129,5 +132,18 @@ background: #DFE2DB
 	position:fixed;
 	bottom:4px;
 	margin:0px 5px 1px 5px;	
-	padding: 2px 0px 0px 0px
+	padding: 2px 0px 0px 0px;
+	display: flex;
+}
+
+.message-area .prefix{
+	font-size:32px;
+	background:#fff;
+	line-height: 45px;
+	padding:5px 2px 0px 0px;
+	border:2px solid #00bcd4;
+	border-left:0;
+}
+.message-area > .prefix:hover {
+	color:#0097a7;
 }
