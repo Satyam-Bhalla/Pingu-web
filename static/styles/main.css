@@ -42,7 +42,7 @@ background: #DFE2DB
 .side_list {
 	position:fixed;
 	height:auto;
-	width:30%;
+	width:25%;
 	height:100vh;
 	overflow-y:auto;
 	background:#fff;
@@ -94,4 +94,40 @@ background: #DFE2DB
 
 .user_search {
 	margin:-2px;
+}
+
+
+.chat_arena {
+	position:fixed;
+	height:auto;
+	right:0;
+	width:74.5%;
+	height:100vh;
+	overflow-y:auto;
+	/*background:#eee;*/
+	padding:10px 0px 25px 0px;
+}
+
+.text-box {
+	resize:none !important;
+	border-radius: 30px;
+	padding:8px 14px;
+	border-width: 2px;
+	border-color: #00bcd4;
+}
+
+.text-box:focus {
+	outline: none;
+	border-color: #0097a7;
+}
+
+
+.message-area {
+	height:auto;
+	width:74%;
+	right:0px;
+	position:fixed;
+	bottom:4px;
+	margin:0px 5px 1px 5px;	
+	padding: 2px 0px 0px 0px
 }
