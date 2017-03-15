@@ -73,6 +73,9 @@ background: #DFE2DB
 
 .user_search {
 	height:45px;
+	width:90%;
+	margin: auto !important;
+	transition: all 0.6s ease-in-out;
 }
 
 .user_search > .prefix {
@@ -146,4 +149,30 @@ background: #DFE2DB
 }
 .message-area > .prefix:hover {
 	color:#0097a7;
+}
+
+
+/*Scroll bar*/
+
+html {
+    overflow-y: hidden;
+}
+
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9e9e9e; 
 }
