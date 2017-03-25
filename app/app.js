@@ -5,13 +5,13 @@ var app = angular.module('offChat', ['ngRoute']);
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
-    	title : "Login - OffChat",
+    	title : "Login - Pingu",
         templateUrl : "views/signin.html",
         controller: 'AuthController',
     })
     .when("/chat/", {
-    	title : "Home - OffChat",
-        templateUrl : "views/chat.html",
+    	title : "Home - Pingu",
+        templateUrl : "views/chat.php",
         controller: 'ChatController',
       //   resolve: {
       //       factory: checkRoute
