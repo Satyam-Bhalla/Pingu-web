@@ -1,4 +1,4 @@
-app.controller("AuthController", function($scope, $http, $window, $location, $rootScope){
+app.controller("AuthController", function($scope, $http, $window, $location, $rootScope) {
 	$('ul.tabs').tabs();
 
 	$scope.login = {
@@ -86,6 +86,15 @@ app.controller("AuthController", function($scope, $http, $window, $location, $ro
 
 
 app.controller("ChatController", function($scope, $rootScope, $http, $window, $location) {
+	$scope.all_users = []
+
+	$http({
+		method: "GET",
+		url: "api/users.php",
+  	})
+	.then(function(data, status, headers, config) {
+		$scope.all_users = data.data
+	})
 	
 })
 
