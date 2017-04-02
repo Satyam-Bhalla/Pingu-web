@@ -18,7 +18,7 @@ background: #DFE2DB
 	font-weight: bold;
 }
 .card-tabs .indicator{
-	background-color: #00b8d4;
+	background-color: #00b8d4 !important;
 }
 /*tabs css ends here*/
 
@@ -38,6 +38,9 @@ background: #DFE2DB
 		text-align: center
 	}
 }
+.brand-name{
+	margin-top: -10px !important;
+}
 
 .side_list {
 	position:fixed;
@@ -47,6 +50,8 @@ background: #DFE2DB
 	overflow-y:auto;
 	background:#fff;
 	padding:10px 0px 25px 0px;
+	z-index: 1;
+	margin-top: 0px !important;
 }
 
 .user_name_list {
@@ -73,8 +78,9 @@ background: #DFE2DB
 
 .user_search {
 	height:45px;
-	width:90%;
+	width:96%;
 	margin: auto !important;
+	margin-bottom: 5px !important;
 	transition: all 0.6s ease-in-out;
 }
 
@@ -111,6 +117,8 @@ background: #DFE2DB
 	padding:10px 0px 25px 0px;
 }
 
+
+
 .text-box {
 	resize:none !important;
 	border-radius: 0px;
@@ -126,8 +134,68 @@ background: #DFE2DB
 	outline: none;
 	border-color: #0097a7;
 }
+/*Messages*/
+.message {
+		  position: relative;
+			display: block;
+		  height: auto;
+			min-height: 54px;
+		  width: 50%;
+		  font-size: 17px;
+		  font-weight: 400;
+		  border-radius: 10px;
+}
+
+.message.from {
+		  color: #343434;
+		  background-color: white;
+			margin-top: 15px;
+		  margin-left: 26px;
+
+}
+
+.message.to {
+		  color: white;
+		  background-color: #00b8d4;
+		  margin-right: 26px;
+		  float: right;
+			margin-top: 15px;
+			margin-bottom: 15px;
+}
+
+.message p {
+		  text-align: left;
+		  padding-top: 14px;
+		  padding-left: 20px;
+		  margin: 0;
+}
+
+.message:after {
+		  position: absolute;
+		  width: 0;
+		  height: 0;
+		  background-color: transparent;
+		  content: "";
+		  margin-top: -9px;
+}
+
+.message.from:after {
+		  border-top: 17px solid transparent;
+		  border-right: 16px solid white;
+		  border-top-left-radius: 20px;
+		  margin-left: -14px;
 
 
+}
+
+.message.to:after {
+		  border-top: 17px solid transparent;
+		  border-left: 16px solid #00b8d4;
+		  border-top-right-radius: 20px !important;
+		  margin-left: 507px;
+			position: fixed;
+}
+/*Messages css finished*/
 .message-area {
 	height:auto;
 	width:74%;
@@ -156,10 +224,7 @@ background: #DFE2DB
 	margin-left: 0px !important;
 
 }
-
-
 /*Scroll bar*/
-
 html {
     overflow-y: hidden;
 }
