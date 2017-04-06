@@ -33,7 +33,7 @@ app.controller("AuthController", function($scope, $http, $window, $location, $ro
 							$rootScope.user.email = data.data.email
 							$location.path('/chat/')
 							$rootScope.$apply()
-							
+
 						}
 					})
 				}
@@ -43,7 +43,7 @@ app.controller("AuthController", function($scope, $http, $window, $location, $ro
 		else {
 			 Materialize.toast('Something is Empty!', 3000)
 		}
-		
+
 	}
 
 
@@ -107,7 +107,7 @@ var checkRoute = function ($q, $rootScope, $location) {
         $rootScope.$apply()
   	}
   	else {
-    	defer.resolve(true); 
-  	}	
+    	defer.resolve(true);
+  	}
   	return defer.promise;
 }

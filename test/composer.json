@@ -1,9 +1,0 @@
-{
-    "require": {
-        "cboden/ratchet": "^0.3.6"
-    },
-    "autoload":{
-      "ChatApp\\":"src"
-    }
-
-}

@@ -5,3 +5,6 @@ function tab_login() {
 function tab_sign() {
     	$('ul.tabs').tabs('select_tab', 'signin');
 }
+function showChat(){
+  console.log("Hello");
+}

@@ -1,7 +1,7 @@
 body {
 	margin:0;
 	padding: 0;
-background: #DFE2DB
+	background: #DFE2DB
 }
 
 .trans {
@@ -19,6 +19,7 @@ background: #DFE2DB
 }
 .card-tabs .indicator{
 	background-color: #00b8d4 !important;
+	visibility: visible;
 }
 /*tabs css ends here*/
 
@@ -59,6 +60,9 @@ background: #DFE2DB
 	line-height: 15px;
 	padding-left:10px;
 	font-weight: 600;
+}
+.collection-item:hover{
+	background: #f0f0f0 !important;
 }
 .list_time {
 	font-size: 12px;
@@ -112,12 +116,14 @@ background: #DFE2DB
 	right:0;
 	width:74.5%;
 	height:100vh;
-	overflow-y:auto;
+	overflow-y: auto !important;
 	background:#eceff1;
 	padding:10px 0px 25px 0px;
 }
 
-
+.getUserid{
+	visibility: hidden;
+}
 
 .text-box {
 	resize:none !important;
@@ -144,23 +150,23 @@ background: #DFE2DB
 		  font-size: 17px;
 		  font-weight: 400;
 		  border-radius: 10px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			overflow-y: auto;
 }
 
 .message.from {
 		  color: #343434;
 		  background-color: white;
-			margin-top: 15px;
 		  margin-left: 26px;
-
+			border-top-right-radius: 50px;
 }
 
 .message.to {
 		  color: white;
 		  background-color: #00b8d4;
-		  margin-right: 26px;
-		  float: right;
-			margin-top: 15px;
-			margin-bottom: 15px;
+		  margin-left: 485px;
+			border-top-left-radius: 50px;
 }
 
 .message p {
@@ -179,22 +185,15 @@ background: #DFE2DB
 		  margin-top: -9px;
 }
 
-.message.from:after {
+/*.message.from:after {
 		  border-top: 17px solid transparent;
 		  border-right: 16px solid white;
-		  border-top-left-radius: 20px;
-		  margin-left: -14px;
+}*/
 
-
-}
-
-.message.to:after {
+/*.message.to:after {
 		  border-top: 17px solid transparent;
 		  border-left: 16px solid #00b8d4;
-		  border-top-right-radius: 20px !important;
-		  margin-left: 507px;
-			position: fixed;
-}
+}*/
 /*Messages css finished*/
 .message-area {
 	height:auto;
@@ -226,7 +225,7 @@ background: #DFE2DB
 }
 /*Scroll bar*/
 html {
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 
 

@@ -1,3 +1,0 @@
-Go to main.js file in the JS folder and then check the ip of your
-computer and change it in the file at:
-var conn = new WebSocket('ws://YOUR_IPv4:8000');

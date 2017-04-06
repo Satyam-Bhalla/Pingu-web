@@ -17,7 +17,7 @@ include ('imports/db_connect.php');
 
 if ($_POST = json_decode(file_get_contents('php://input'),true)) {
 
-if (isset($_POST['username'], $_POST['password'])) {
+ if (isset($_POST['username'], $_POST['password'])) {
 	// We remove slashes depending on the configuration
 
 	if (get_magic_quotes_gpc()) {
@@ -48,10 +48,10 @@ if (isset($_POST['username'], $_POST['password'])) {
 
 		$uid = $dn['id'];
 		$login_message = "You have successfuly been logged in";
-		$arr_m = array("response"=>$login_message, 
-						"status"=>True, 
-						"id"=>$uid, 
-						"name"=>$dn['username'], 
+		$arr_m = array("response"=>$login_message,
+						"status"=>True,
+						"id"=>$uid,
+						"name"=>$dn['username'],
 						"email"=>$dn["email"]);
 
 		$json_login_message = json_encode($arr_m);
