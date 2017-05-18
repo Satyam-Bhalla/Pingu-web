@@ -1,0 +1,278 @@
+body {
+	margin-top: 0px !important;
+	padding: 0;
+	background: #DFE2DB
+}
+
+.trans {
+	background:none;
+	background: #fff;
+}
+
+.pointit {
+	cursor: pointer;
+}
+/*Css for the tabs*/
+.card-tabs a {
+	color: #00b8d4 !important;
+	font-weight: bold;
+}
+.card-tabs .indicator{
+	background-color: #00b8d4 !important;
+	visibility: visible;
+}
+/*tabs css ends here*/
+
+.welcome {
+	color:  #00b8d4;
+	card:white;
+}
+.btn-large {
+	width: 90% !important;
+}
+
+@media screen and (min-width: 568px) {
+	#toast-container {
+		position: fixed;
+		top: 0px !important;
+		min-width: 90%;
+		text-align: center
+	}
+}
+.brand-name{
+	margin-top: -10px !important;
+}
+
+.side_list {
+	position:fixed;
+	height:auto;
+	width:25%;
+	height:100vh;
+	overflow-y:auto;
+	background:#fff;
+	padding:10px 0px 25px 0px;
+	z-index: 1;
+	margin-top: 0px !important;
+}
+
+.user_name_list {
+	float:left;
+	line-height: 15px;
+	padding-left:10px;
+	font-weight: 600;
+}
+.collection a{
+	color: #343434;
+}
+.collection-item:hover{
+	background: #f0f0f0 !important;
+}
+.list_time {
+	font-size: 12px;
+	float:right;
+	line-height: 15px;
+}
+
+.set_line_height {
+	margin-top:10px;
+}
+
+.message_sample {
+	font-size:12px;
+	padding-left:10px;
+}
+
+
+.user_search {
+	height:45px;
+	width:96%;
+	margin: auto !important;
+	margin-bottom: 5px !important;
+	transition: all 0.6s ease-in-out;
+}
+
+.user_search > .prefix {
+	line-height:43px;
+	padding:2px 5px 0px 10px;
+	font-size: 27px;
+	font-size: 27px
+}
+
+.user_search > input {
+	border:0;
+}
+.user_search > input:focus {
+	border:0 !important;
+	border-color: #fff !important;
+	padding:0;
+	box-shadow:0px 0px 0px #fff !important;
+}
+
+.user_search {
+	margin:-2px;
+}
+
+
+.chat_arena {
+	position:fixed;
+	/*height:auto;*/
+	right:0;
+	width:74.5%;
+	height:100vh;
+	overflow-y: scroll !important;
+	background:#eceff1;
+	padding:10px 0px 25px 0px;
+	margin-top: -23px;
+}
+#logout{
+float:right !important;
+margin-top:0px;
+margin-left:700px;
+width: 140px;
+height: 35px;
+font-size: 20px;
+text-align: center;
+}
+#sendButton{
+	background-color: inherit;
+
+}
+.getUserid{
+	visibility: hidden;
+}
+
+.text-box {
+	resize:none !important;
+	border-radius: 2px;
+	padding:14px 14px 0px 14px !important;
+	border-width: 2px;
+	height: 55px;
+	border:2px solid #00bcd4 !important;
+	background: #fff;
+	border-right: 0 !important;
+	margin-bottom: -100px !important;
+}
+.text-box:focus {
+	outline: none;
+	border-color: #0097a7;
+}
+/*Messages*/
+.message {
+		  position: relative;
+			display: block;
+		  height: auto;
+			min-height: 54px;
+		  width: 50%;
+		  font-size: 17px;
+		  font-weight: 400;
+		  border-radius: 10px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+}
+
+.message.from {
+		  color: #343434;
+		  background-color: white;
+		  margin-left: 26px;
+			border-radius: 50px;
+}
+
+.message.to {
+		  color: white;
+		  background-color: #00b8d4;
+		  margin-left: 485px;
+			border-radius: 50px;
+}
+
+.message p {
+		  text-align: left;
+		  padding-top: 14px;
+		  padding-left: 20px;
+		  margin: 0;
+}
+
+.message:after {
+		  position: absolute;
+		  width: 0;
+		  height: 0;
+		  background-color: transparent;
+		  content: "";
+		  margin-top: -9px;
+}
+
+/*.message.from:after {
+		  border-top: 17px solid transparent;
+		  border-right: 16px solid white;
+}*/
+
+/*.message.to:after {
+		  border-top: 17px solid transparent;
+		  border-left: 16px solid #00b8d4;
+}*/
+/*Messages css finished*/
+.message-area {
+	height:auto;
+	width:74%;
+	right:0px;
+	position:fixed;
+	bottom:4px;
+	margin:0px 5px 1px 5px !important;
+	padding: 2px 0px 0px 0px;
+	display: flex;
+}
+
+.message-area .prefix{
+	font-size:32px;
+	background:#fff;
+	line-height: 45px;
+	padding:5px 2px 0px 0px;
+	border:2px solid #00bcd4;
+	border-left:0;
+	}
+.message-area > .prefix:hover {
+	color:#0097a7;
+}
+.emoji{
+	float: left !important;
+	padding-left: 0px !important;
+	margin-left: 0px !important;
+
+}
+/*Scroll bar*/
+html {
+    overflow-y: hidden;
+}
+
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9e9e9e;
+}
+
+@media screen and (max-width:768px) {
+	.side_list {
+		display: none;
+	}
+
+	.chat_arena {
+		width:100%;
+		overflow-y: scroll;
+	}
+
+	.message-area {
+		width:99%;
+	}
+}
